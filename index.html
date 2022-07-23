@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Passcard - Cart</title>
+    <link rel="shortcut icon" href="./img/jobpasscard_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <img src="./img/jobpasscard_logo.png" alt="jobpasscard_logo">
+            <div class="brandName">
+                <h1><span>Jop</span>Passcard</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">PASSCARD</a></li>
+                <li><a href="">PROFILE</a></li>
+            </ul>
+        </nav>
+        <div class="menuContainer">
+            <ul>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><i class="fa-solid fa-cart-shopping"></i></li>
+                <li><a href="">LOGIN</a></li>
+                <li><a href="">SIGN UP</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>My Cart</h1>
+        <div class="container">
+            <section class="pickedItemList">
+                <div class="item item01">
+                    <img src="./img/btn-delete.png" alt="delete" class="delete_Button">
+                    <img src="/img/GoogleSlidePasscard.png" alt="GoogleSlidePasscard" class="itemImg">
+                    <div class="itemDetails">
+                        <h3 class="itemName">Google Slides</h3>
+                        <div class="itemChoiceContainer">
+                            <img id="item01Level" class="itemLevelIndicator" src="./img/LV1.svg" alt="LV1">
+                            <label for="item01Choice"></label>
+                            <select name="choice" id="item01Choice"
+                                onchange="document.getElementById('item01Level').src = this.value">
+                                <option value="./img/LV1.svg">LV 1</option>
+                                <option value="./img/LV2.svg">LV 2</option>
+                                <option value="./img/LV3.svg">LV 3</option>
+                            </select>
+                            <p class="itemPrice">200.00 THB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item02">
+                    <img src="./img/btn-delete.png" alt="delete" class="delete_Button">
+                    <img src="/img/GoogleDocPasscard.png" alt="GoogleDocPasscard" class="itemImg">
+                    <div class="itemDetails">
+                        <h3 class="itemName">Google Doc</h3>
+                        <div class="itemChoiceContainer">
+                            <img id="item02Level" class="itemLevelIndicator" src="./img/LV1.svg" alt="LV1">
+                            <label for="item02Choice"></label>
+                            <select name="choice" id="item02Choice"
+                                onchange="document.getElementById('item02Level').src = this.value">
+                                <option value="./img/LV1.svg">LV 1</option>
+                                <option value="./img/LV2.svg">LV 2</option>
+                                <option value="./img/LV3.svg">LV 3</option>
+                            </select>
+                            <p class="itemPrice">200.00 THB</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="orderInfo">
+                <h2>Order Info</h2>
+                <div class="subtotalContainer">
+                    <p class="subtotalText">Subtotal</p>
+                    <p class="subtotalAmount">THB 300</p>
+                </div>
+                <div class="promoContainer">
+                    <img src="./img/coupon.png" alt="coupon icon" class="couponIcon">
+                    <form action="">
+                        <label for="promotionCode"></label>
+                        <input type="text" name="promoCode" id="promoCode" placeholder="Promotion code">
+                        <input type="submit" value="APPLY">
+                    </form>
+                </div>
+                <hr>
+                <div class="totalContainer">
+                    <p class="totalText">Total payment</p>
+                    <p class="totalAmount">THB 300</p>
+                </div>
+                <button class="checkout_Button">
+                    <p class="ceckoutText">LOG IN TO CHECKOUT</p>
+                </button>
+
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
