@@ -25,7 +25,10 @@ ul a {
 ul a:hover {
     color: #00dcb3;
 }
-
+body {
+    font-family: sans-serif;
+    color: #212E4B;
+}
 /* Header */
 header {
     display: flex;
@@ -70,11 +73,14 @@ header {
 nav {
     display: flex;
     align-items: center;
+    width: 30%;
 }
 
 nav ul {
-    gap: 10px;
+    /* gap: 30px; */
     align-items: center;
+    width: 100%;
+    justify-content: space-around;
 }
 
 /* -MenuBar */
@@ -153,16 +159,16 @@ select {
 }
 
 .item, .orderInfo {
-    box-shadow: 0px 0px 78px 9px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 0px 78px 9px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 0px 78px 9px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 160px rgb(0 0 0 / 5%);
+    -webkit-box-shadow: 0px 4px 160px rgb(0 0 0 / 5%);
+    -moz-box-shadow: 0px 4px 160px rgb(0 0 0 / 5%);
 }
 
 /* OrderINFO */
 .orderInfo {
     box-sizing: border-box;
     background-color: #ffffff;
-    border: 1px solid #00000050;
+    border: 1px solid #00000020;
     border-radius: 20px;
     width: 51%;
     padding: 40px;
@@ -178,22 +184,43 @@ select {
 
 .promoContainer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     padding-left: 5px;
+    margin-bottom: 30px;
+    min-width: none;
+}
+.promoContainer form{
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: none;
 }
 
 .couponIcon {
     height: 20px;
+    flex-grow: 0;
+    margin-left: 5px;
 }
 #promoCode {
     border: 1px solid #818ca77d;
-    width: 255px;
+    /* width: 255px; */
     margin-right: 10px;
     height: 28px;
     font-size: 16px;
     border-radius: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-left: 10px;
+    width: 1px;
+}
+[type=text]:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    border-color: #86b7fe;
+    outline: 0;
 }
 
 ::placeholder {
@@ -207,5 +234,46 @@ input[type=submit] {
     border-radius: 15px;
     text-align: center;
     height: 36px;
-    width: 120px;
+    width: 100px;
+    color: #59c4ae;
+}
+[type=submit]:hover {
+    background-color: #DEFAF2;
+    cursor: pointer;
+}
+[type=submit]:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.totalContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0 18px 0;
+    align-items: center;
+}
+.totalText {
+    font-size: 18px;
+}
+.totalAmount {
+    font-size: 28px;
+    font-weight: bold;
+    color: #59c4ae;
+}
+.checkout_Button {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #00dbb6;
+    box-shadow: 0px 6px 20px #adf0dc;
+    font-size: 18px;
+    color: #212E4B;
+    font-weight: bold;
+}
+.checkout_Button:hover {
+    background-color: #71e8c4;
+    cursor: pointer;
+}
+.checkout_Button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
